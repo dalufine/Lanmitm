@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oinux.lanmitm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.lan" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="com.oinux.lanmitm.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launch"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.oinux.lanmitm.ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.oinux.lanmitm.ui.HostsActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.SniffActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.HijackActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.BrowserActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.HttpActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.InjectActivity" />
+        <activity android:name="com.oinux.lanmitm.ui.HijackHistory" />
+        <activity
+            android:name="com.oinux.lanmitm.ui.AboutActivity"
+            android:theme="@style/Activity_DialogTheme" />
+
+        <service android:name="com.oinux.lanmitm.service.ArpService" />
+        <service android:name="com.oinux.lanmitm.service.HttpService" />
+        <service android:name="com.oinux.lanmitm.service.SnifferService" />
+        <service android:name="com.oinux.lanmitm.service.HijackService" />
+        <service android:name="com.oinux.lanmitm.service.InjectService" />
+
+        <receiver android:name="com.oinux.lanmitm.receiver.NetworkReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+</manifest>

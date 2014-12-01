@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/topbar_bg" >
+
+        <ImageView
+            android:id="@+id/actionbar_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_launch" />
+
+        <TextView
+            android:id="@+id/actionbar_logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/actionbar_logo"
+            android:text="@string/app_name"
+            android:textColor="#ffffffff"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/actionbar_about"
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/about_sel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff171c20"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:id="@+id/main_open_protect_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="4.0dip"
+            android:text="启用防护"
+            android:textColor="#ffff5926"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_open_protect_head"
+            android:gravity="bottom|left|center"
+            android:text="防御arp、dns欺骗等攻击"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginTop="12.0dip"
+            android:padding="1.0dip" >
+
+            <CheckBox
+                android:id="@+id/main_open_close_protect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/on_off_checkbox"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff171c20"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:id="@+id/main_arp_way_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="4.0dip"
+            android:text="ARP欺骗方式"
+            android:textColor="#ffff5926"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_arp_way_head"
+            android:gravity="bottom|left|center"
+            android:text="路由、主机单向欺骗或者双向欺骗"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginTop="12.0dip"
+            android:padding="1.0dip" >
+
+            <Button
+                android:id="@+id/main_arp_cheat_way_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_settings"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff171c20"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:id="@+id/main_http_server_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="4.0dip"
+            android:text="HttpServer"
+            android:textColor="#ffff5926"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_http_server_head"
+            android:gravity="bottom|left|center"
+            android:text="自定义httpserver，提供简单web服务"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginTop="12.0dip"
+            android:padding="1.0dip" >
+
+            <Button
+                android:id="@+id/main_http_server_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_settings"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/hijack_history_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff171c20"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:id="@+id/main_hijack_history_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingTop="4.0dip"
+            android:text="劫持历史"
+            android:textColor="#ffff5926"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_hijack_history_head"
+            android:gravity="bottom|left|center"
+            android:text="查看保存在本地的会话劫持"
+            android:textColor="#ffffffff"
+            android:textSize="14.0dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/main_lan_scan_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:padding="14.0dip"
+            android:text="扫描主机"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
